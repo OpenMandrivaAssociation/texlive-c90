@@ -24,11 +24,13 @@ TeXLive c90 package.
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
@@ -47,4 +49,4 @@ TeXLive c90 package.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
+cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
