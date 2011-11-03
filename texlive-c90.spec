@@ -1,5 +1,11 @@
+# revision 15878
+# category Package
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-c90
-Version:	20111101
+Version:	20111103
 Release:	1
 Summary:	TeXLive c90 package
 Group:		Publishing
@@ -40,6 +46,7 @@ TeXLive c90 package.
 #- source
 %doc %{_texmfdistdir}/source/fonts/enc/c90/c90.etx
 %doc %{_texmfdistdir}/source/fonts/enc/c90/c90.mtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,4 +56,6 @@ TeXLive c90 package.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar fonts doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
