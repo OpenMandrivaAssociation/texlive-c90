@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-c90
 Version:	20111103
-Release:	5
+Release:	6
 Summary:	TeXLive c90 package
 Group:		Publishing
 URL:		http://tug.org/texlive
