@@ -1,6 +1,6 @@
 Name:		texlive-c90
 Version:	60830
-Release:	1
+Release:	2
 Summary:	TeXLive c90 package
 Group:		Publishing
 URL:		http://tug.org/texlive
